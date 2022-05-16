@@ -54,10 +54,7 @@ void Gpt_Init(const Gpt_ConfigType* ConfigPtr)
 			}
 		}
 }
-void Gpt_DeInit(void)
-{
 
-}
 Gpt_ValueType Gpt_GetTimeElapsed(u8 Copy_u8Channel)
 {
 	u8 Loc_u8TimeElapsed;
