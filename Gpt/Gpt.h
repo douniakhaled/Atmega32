@@ -41,6 +41,8 @@ typedef struct {
 
 
 void Gpt_Init(const Gpt_ConfigType* ConfigPtr);
+
+void Gpt_DeInit(void);
 Gpt_ValueType Gpt_GetTimeElapsed(Gpt_ChannelType Copy_u8Channel);
 Gpt_ValueType Gpt_GetTimeRemaining(Gpt_ChannelType Channel);
 void Gpt_StartTimer(Gpt_ChannelType Channel,Gpt_ValueType Value);

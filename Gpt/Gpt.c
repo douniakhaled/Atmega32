@@ -57,38 +57,38 @@ void Gpt_Init(const Gpt_ConfigType* ConfigPtr)
 
 Gpt_ValueType Gpt_GetTimeElapsed(u8 Copy_u8Channel)
 {
-	u8 Loc_u8TimeElapsed;
+	u16 Loc_u16TimeElapsed;
 	switch(Copy_u8Channel)
 	{
 		case Gpt_enuTimer0:
-							Loc_u8TimeElapsed=TCNT0;
+							Loc_u16TimeElapsed=TCNT0;
 							break;
 		case Gpt_enuTimer1:
-							Loc_u8TimeElapsed=TCNT1;
+							Loc_u16TimeElapsed=TCNT1;
 							break;
 		case Gpt_enuTimer2:
-							Loc_u8TimeElapsed=TCNT2;
+							Loc_u16TimeElapsed=TCNT2;
 							break;
 	}
-	return 	Loc_u8TimeElapsed;
+	return 	Loc_u16TimeElapsed;
 
 }
 Gpt_ValueType Gpt_GetTimeRemaining(Gpt_ChannelType Channel)
 {
-	u8 Loc_u8TimeRemaining=0;
+	u16 Loc_u16TimeRemaining=0;
 	switch(Channel)
 	{
 		case Gpt_enuTimer0:
-							Loc_u8TimeRemaining=OCR0-TCNT0;
+							Loc_u16TimeRemaining=OCR0-TCNT0;
 							break;
 		case Gpt_enuTimer1:
-							Loc_u8TimeRemaining=OCR1A-TCNT1;
+							Loc_u16TimeRemaining=OCR1A-TCNT1;
 							break;
 		case Gpt_enuTimer2:
-							Loc_u8TimeRemaining=OCR2-TCNT2;
+							Loc_u16TimeRemaining=OCR2-TCNT2;
 							break;
 	}
-	return 	Loc_u8TimeRemaining;
+	return 	Loc_u16TimeRemaining;
 }
 void Gpt_StartTimer(Gpt_ChannelType Channel,Gpt_ValueType Value)
 {
